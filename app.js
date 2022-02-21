@@ -2,7 +2,7 @@ let express = require('express');
 let app = express();
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
-const mongoUrl = "mongodb+srv://user:root@cluster0.fsqmx.mongodb.net/edu-liquor-project-api?retryWrites=true&w=majority"
+const mongoUrl = "mongodb+srv://user:user@cluster0.xxapc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const dotenv = require('dotenv');
 dotenv.config()
 const bodyParser = require('body-parser')
@@ -143,7 +143,7 @@ console.log('hello world');
 
 MongoClient.connect(mongoUrl, (err, client) => {
     if (err) console.log("Error While Connecting")
-    db = client.db('edu-liquor-project-api');
+    db = client.db('liquorspi');
     app.listen(port, () => {
         console.log(`listening on port no ${port}`)
     })
